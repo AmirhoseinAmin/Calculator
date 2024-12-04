@@ -2,25 +2,14 @@
 --------------------|📝 : Colors
 */
 
-//----------|✏️ : As the number increases, the color becomes lighter.
+:root {
+  --color-one: #4ea1d3;
+  --color-two: #e85a71;
+  --color-three: #d8e9ef;
+  --color-four: #454552;
+}
 
-$color-primary:#55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-
-$color-gray: #999;
-$color-gray-light-1:#eee;
-$color-gray-light-2:#f7f7f7;
-$color-gray-dark-1: #333;
-$color-gray-dark-2: #777;
-
-$color-white: #fff;
-$color-black: #000;
-
-
+body[class="dark"] {
+  --color-three: #454552;
+  --color-four: #d8e9ef;
+}

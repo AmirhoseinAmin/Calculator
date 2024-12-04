@@ -14,20 +14,19 @@
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
+@import "base/dark-mode.scss";
 
 /*
 --------------------|📝 : Components 
 */
 
 @import "components/button";
-@import "components/card";
 
 /*
 --------------------|📝 : Layout 
 */
 
 @import "layout/header";
-@import "layout/footer";
 
 /*
 --------------------|📝 : Pages 

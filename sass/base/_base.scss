@@ -32,8 +32,15 @@ html {
 }
 
 body {
+  height: 100vh;
   box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    var(--color-three) 0%,
+    var(--color-one) 100%
+  );
 }
+
 
 /*
 --------------------|📝 : Container
