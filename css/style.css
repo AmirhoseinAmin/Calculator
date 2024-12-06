@@ -83,6 +83,7 @@ body {
   height: 100vh;
   box-sizing: border-box;
   background: linear-gradient(135deg, var(--color-three) 0%, var(--color-one) 100%);
+  overflow: hidden;
 }
 
 /*
@@ -94,6 +95,9 @@ body {
   padding: 0 1.6rem;
 }
 
+/*
+--------------------|📝 : Header
+*/
 @keyframes btnOff {
   0% {
     transform: translateY(-20rem);
@@ -112,6 +116,29 @@ body {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+/*
+--------------------|📝 : Calculator
+*/
+@keyframes openCalc {
+  0% {
+    transform: translateY(calc(100vh + 36rem));
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes closeCalc {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 36rem));
+    opacity: 0;
   }
 }
 body {
@@ -150,10 +177,81 @@ body {
 .dark .dark-light {
   box-shadow: inset 1px 1px 5px 0 black, inset -2px -2px 5px 0 #636363;
 }
+.dark .calculator__btns span {
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2), -6px -6px 10px -1px rgba(255, 255, 255, 0.05);
+}
+.dark .calculator__btns span:active {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.05), -0.5px -0.5px 0 rgba(0, 0, 0, 0.1), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
 
 /*
 --------------------|📝 : Components 
 */
+/*
+--------------------|📝 : Calculator
+*/
+.calculator {
+  width: 22rem;
+  padding: 1.2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--color-three);
+  border-radius: 2.4rem;
+  animation-name: closeCalc;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.calculator__display {
+  width: 100%;
+  direction: rtl;
+}
+.calculator__display span {
+  display: block;
+  color: var(--color-four);
+}
+.calculator__calculations {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+.calculator__result {
+  font-size: 3.6rem;
+}
+.calculator__btns {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.calculator__btns span {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-four);
+  background-color: var(--color-three);
+  border-radius: 0.8rem;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.calculator__btns span:active {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0 white, 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+.calculator__btns span:nth-child(4n) {
+  color: var(--color-one);
+}
+.calculator__btns span:nth-last-child(1) {
+  color: #ffffff;
+  background-color: var(--color-one);
+}
+.calculator__open {
+  animation-name: openCalc;
+}
 /*
 --------------------|📝 : Layout 
 */
@@ -220,5 +318,14 @@ header .on-off ion-icon:hover {
 /*
 --------------------|📝 : Pages 
 */
+/*
+--------------------|📝 : main
+*/
+main {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=style.css.map */

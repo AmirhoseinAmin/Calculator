@@ -1,0 +1,82 @@
+/*
+--------------------|📝 : Calculator
+*/
+
+.calculator {
+  width: 22rem;
+  padding: 1.2rem;
+  @include flex(2, center, space-between, column);
+  background-color: var(--color-three);
+  border-radius: 2.4rem;
+  animation-name: closeCalc;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+
+  &__display {
+    width: 100%;
+    direction: rtl;
+
+    span {
+      display: block;
+      color: var(--color-four);
+    }
+  }
+
+  &__calculations {
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+  }
+
+  &__result {
+    font-size: 3.6rem;
+  }
+
+  &__btns {
+    @include flex(1.2, center, center, null);
+    flex-wrap: wrap;
+
+    span {
+      width: 4rem;
+      height: 4rem;
+      line-height: 4rem;
+      text-align: center;
+      font-size: 2rem;
+      color: var(--color-four);
+      background-color: var(--color-three);
+      border-radius: 0.8rem;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+
+      &:active {
+        box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+          inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+          -0.5px -0.5px 0 white, 0.5px 0.5px 0 rgba(0, 0, 0, 0.15),
+          0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+      }
+
+      &:nth-child(4n) {
+        color: var(--color-one);
+      }
+
+      &:nth-last-child(1) {
+        color: #ffffff;
+        background-color: var(--color-one);
+      }
+    }
+  }
+
+  &__open {
+    animation-name: openCalc;
+  }
+
+  &__number {
+
+  }
+
+  &__operator {
+
+  }
+}

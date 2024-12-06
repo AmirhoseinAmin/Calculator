@@ -1,0 +1,21 @@
+/*
+--------------------|📝 : Dark
+*/
+
+.dark {
+    .dark-light {
+        box-shadow: inset 1px 1px 5px 0 black, inset -2px -2px 5px 0 #636363;
+    }
+
+    .calculator{
+        &__btns{
+            span {
+                box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2), -6px -6px 10px -1px rgba(255, 255, 255, 0.05);
+    
+                &:active {
+                    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.05), -0.5px -0.5px 0 rgba(0, 0, 0, 0.1), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+}

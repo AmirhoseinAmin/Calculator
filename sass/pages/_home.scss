@@ -1,0 +1,8 @@
+/*
+--------------------|📝 : main
+*/
+
+main {
+    margin-top: 8rem;
+    @include flex (0, center, center, null);
+}
