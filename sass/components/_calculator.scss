@@ -16,17 +16,29 @@
 
   &__display {
     width: 100%;
-    direction: rtl;
+    display: grid;
+    justify-items: flex-end;
+    overflow-y: hidden;
+    overflow-x: auto;
 
     span {
       display: block;
       color: var(--color-four);
     }
-  }
 
-  &__calculations {
-    margin-bottom: 1.2rem;
-    font-size: 2rem;
+    &::-webkit-scrollbar {
+      height: 0.6rem;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--color-three);
+      border-radius: 1rem;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-four);
+      border-radius: 1rem;
+    }
   }
 
   &__result {
@@ -70,13 +82,5 @@
 
   &__open {
     animation-name: openCalc;
-  }
-
-  &__number {
-
-  }
-
-  &__operator {
-
   }
 }
