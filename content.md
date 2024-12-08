@@ -9,6 +9,7 @@ This is a simple calculator
 - **HTML5**
 - **CSS3**
 - **Sass**
+- **JS**
 - **Git**
 
 ## Architecture
