@@ -2,33 +2,33 @@
 --------------------|📝 : Abstracts
 */
 
-@use "abstracts/variable";
-@use  "abstracts/mixins";
+@use "./abstracts/variable" as *;
+@use "./abstracts/mixins" as *;
 
 /*
 --------------------|📝 : Base 
 */
 
-@use  "base/base";
-@use "base/animations";
-@use "base/typography";
-@use "base/utilities";
-@use "base/dark-mode";
+@use "./base/base" as *;
+@use "./base/animations" as *;
+@use "./base/typography" as *;
+@use "./base/utilities" as *;
+@use "./base/dark-mode" as *;
 
 /*
 --------------------|📝 : Components 
 */
 
-@use "components/calculator";
+@use "./components/calculator" as *;
 
 /*
 --------------------|📝 : Layout 
 */
 
-@use "layout/header";
+@use "./layout/header" as *;
 
 /*
 --------------------|📝 : Pages 
 */
 
-@use "pages/home";
+@use "./pages/home" as *;

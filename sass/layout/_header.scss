@@ -1,15 +1,17 @@
+@use '../abstracts/mixins';
+
 /*
 --------------------|📝 : Header
 */
 
 header {
   padding: 2.4rem;
-  @include flex(0, center, space-between, null);
+  @include mixins.flex(0, center, space-between, null);
 
   .dark-light {
     width: 8rem;
     height: 6rem;
-    @include flex(0, center, null, null);
+    @include mixins.flex(0, center, null, null);
     padding: 0.8rem;
     font-size: 2.4rem;
     box-shadow: inset -3px -2px 5px #ffffff, inset 3px 2px 5px #c4c4c4;

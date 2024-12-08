@@ -1,8 +1,10 @@
+@use "../abstracts/mixins";
+
 /*
 --------------------|📝 : main
 */
 
 main {
     margin-top: 8rem;
-    @include flex (0, center, center, null);
+    @include mixins.flex (0, center, center, null);
 }

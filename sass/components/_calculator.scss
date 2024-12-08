@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 /*
 --------------------|📝 : Calculator
 */
@@ -5,14 +7,13 @@
 .calculator {
   width: 22rem;
   padding: 1.2rem;
-  @include flex(2, center, space-between, column);
+  @include mixins.flex(2, center, space-between, column);
   background-color: var(--color-three);
   border-radius: 2.4rem;
   animation-name: closeCalc;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
-
 
   &__display {
     width: 100%;
@@ -29,12 +30,12 @@
     &::-webkit-scrollbar {
       height: 0.6rem;
     }
-    
+
     &::-webkit-scrollbar-track {
       background: var(--color-three);
       border-radius: 1rem;
     }
-    
+
     &::-webkit-scrollbar-thumb {
       background: var(--color-four);
       border-radius: 1rem;
@@ -46,7 +47,7 @@
   }
 
   &__btns {
-    @include flex(1.2, center, center, null);
+    @include mixins.flex(1.2, center, center, null);
     flex-wrap: wrap;
 
     span {

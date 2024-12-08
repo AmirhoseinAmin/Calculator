@@ -1,3 +1,5 @@
+@use '../abstracts/mixins';
+
 /*
 --------------------|📝 : Reset
 */
@@ -18,11 +20,11 @@ html {
   //----------|✏️ : This defines what 1rem is.
   font-size: 62.5%;
 
-  @include respond(big-desktop) {
+  @include mixins.respond(big-desktop) {
     font-size: 75%;
   }
 
-  @include respond(tab-land) {
+  @include mixins.respond(tab-land) {
     font-size: 56.25%;
   }
 }
@@ -37,4 +39,3 @@ body {
   );
   overflow: hidden;
 }
-
