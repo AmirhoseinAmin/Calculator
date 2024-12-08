@@ -2,33 +2,33 @@
 --------------------|📝 : Abstracts
 */
 
-@import "abstracts/variable";
-@import "abstracts/mixins";
+@use "abstracts/variable";
+@use  "abstracts/mixins";
 
 /*
 --------------------|📝 : Base 
 */
 
-@import "base/base";
-@import "base/animations";
-@import "base/typography";
-@import "base/utilities";
-@import "base/dark-mode";
+@use  "base/base";
+@use "base/animations";
+@use "base/typography";
+@use "base/utilities";
+@use "base/dark-mode";
 
 /*
 --------------------|📝 : Components 
 */
 
-@import "components/calculator";
+@use "components/calculator";
 
 /*
 --------------------|📝 : Layout 
 */
 
-@import "layout/header";
+@use "layout/header";
 
 /*
 --------------------|📝 : Pages 
 */
 
-@import "pages/home";
+@use "pages/home";
